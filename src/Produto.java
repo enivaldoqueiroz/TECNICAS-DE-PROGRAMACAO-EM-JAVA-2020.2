@@ -4,17 +4,17 @@ public class Produto {
 	//Atributos da classe Produto
 	private int codigo;
 	private String nome;
-	private String endereco;
+	private float peso;
 	
 	//Construtores
 	public Produto() {
 		
 	}
 	
-	public Produto(int codigo, String nome, String endereco) {
+	public Produto(int codigo, String nome, float peso) {
 		this.codigo = codigo;
 		this.nome = nome;
-		this.endereco = endereco;
+		this.peso = peso;
 	}
 	
 	
@@ -31,11 +31,11 @@ public class Produto {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getEndereco() {
-		return endereco;
+	public float getPeso() {
+		return peso;
 	}
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
+	public void setPeso(float peso) {
+		this.peso = peso;
 	}
 	
 	
