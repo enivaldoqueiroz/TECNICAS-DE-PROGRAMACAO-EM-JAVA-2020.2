@@ -1,26 +1,46 @@
 
-public class Entrega {
+public class Entrega extends Produto{
 
 	//Atributos da classe Produto
 	private int codigo;
 	private String data;
-	private Cliente cliente;
+	private Cliente cliente[] = new Cliente[3]; 	//Agregação da classe Cliente
 	private float preco;
-	private Produto[] produto;
+	private Produto produto[] = new Produto[3];	//Agregação da classe Produto
+	private int indice = 0;
 	
 	//Construtores
 	public Entrega() {
 		
 	}
-	public Entrega(int codigo, String data, Cliente cliente, float preco, Produto[] produto) {
+	public Entrega(int codigo, String data, float preco) {
 		this.codigo = codigo;
 		this.data = data;
-		this.cliente = cliente;
 		this.preco = preco;
-		this.produto = produto;
+		
 	}
 	
 	//Metodos da classe Produto
+	
+	//Metodo para inserção dos pedidos no vetor Produto
+	public void setCadastrarPedido(Produto p, Cliente c) {
+		this.produto[indice] = p;
+		this.cliente[indice] = c;
+		indice++;
+	}
+	
+	//Metodo para retornar os pedidos cadastrados
+	public Produto getMotrarPedido(int indice) {
+		return this.produto[indice];
+	}
+	//Metodo para retornar os pedidos cadastrados do cliente
+	public Cliente getMotrarPedidoCliente(int indice) {
+		return this.cliente[indice];
+	}
+	
+	
+	
+	//Outros Metodos 
 	public int getCodigo() {
 		return codigo;
 	}
@@ -33,11 +53,8 @@ public class Entrega {
 	public void setData(String data) {
 		this.data = data;
 	}
-	public Cliente getCliente() {
+	public Cliente[] getCliente() {
 		return cliente;
-	}
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
 	}
 	public Produto[] getProduto() {
 		return produto;

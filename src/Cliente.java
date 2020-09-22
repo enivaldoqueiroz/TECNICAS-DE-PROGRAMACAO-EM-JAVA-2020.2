@@ -5,7 +5,7 @@ public class Cliente {
 		private int codigo;
 		private String nome;
 		private String endereco;
-		
+				
 		//Construtores
 		public Cliente() {
 			
@@ -15,6 +15,7 @@ public class Cliente {
 			this.codigo = codigo;
 			this.nome = nome;
 			this.endereco = endereco;
+			
 		}
 		
 		
@@ -37,4 +38,6 @@ public class Cliente {
 		public void setEndereco(String endereco) {
 			this.endereco = endereco;
 		}
+
+		
 }
