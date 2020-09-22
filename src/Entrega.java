@@ -63,7 +63,7 @@ public class Entrega extends Produto{
 		this.produto = produto;
 	}
 	public float getPreco() {
-		return preco;
+		return this.preco = preco * 4.0f;
 	}
 	public void setPreco(float preco) {
 		this.preco = preco;
