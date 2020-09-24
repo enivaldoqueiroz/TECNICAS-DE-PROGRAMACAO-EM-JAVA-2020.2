@@ -13,6 +13,7 @@ public class Principal {
 		cli02.setNome("Rivia Manuela");
 		cli02.setEndereco("Rua 12, N280");
 		
+				
 		//Instanciando a classe Produto
 		Produto prod01 = new Produto();
 		prod01.setCodigo(0001);
@@ -31,32 +32,44 @@ public class Principal {
 		
 		//Instanciando a classe Entrega
 		Entrega entrega = new Entrega();
-		//Vetor de produtos = Inserindo os pedidos no indice do vetor
-		entrega.setCadastrarPedido(prod01,cli01);
-		entrega.setInserePeso(1.0f);
-		entrega.setInserePeso(1.0f);
-		entrega.setInserePeso(1.0f);
+		//Inserindo os pedidos no indice do vetor de pedidos da classe entraga
+		entrega.setCadastrarPedido(prod01,cli01,1.0f);
 		entrega.setPreco(4.5f);
+		entrega.setCadastrarPedido(prod02, cli02, 2.0f);
+		//entrega.setPreco(5.0f);
 		
-		//Instanciando a classe Entrega
+		//Instanciando a classe EntregaExpressa
 		EntregaExpressa entregaExpressa = new EntregaExpressa();
-		//Vetor de produtos = Inserindo os pedidos no indice do vetor
-		entregaExpressa.setCadastrarPedido(prod02,cli02);
+		//Inserindo os pedidos no indice do vetor de pedidos da classe entragaExpressa
+		entregaExpressa.setCadastrarPedido(prod02,cli02,2.0f);
 		entregaExpressa.setPreco(4.5f);
 		
 		
 		
-		//Exibe os pedidos da Entraga normal
-		System.out.println(entrega.getMotrarPedidoCliente(0).getNome());
-		System.out.println(entrega.getMotrarPedido(0).getNome());
-		System.out.println(entrega.getSomaPeso());
-		System.out.println(entrega.getPreco());
+		//Exibe os pedidos da Entraga Defauld
+		//Pedido do Cliente 01
+				System.out.println("Nome do Cliente: " + entrega.getMotrarPedidoCliente(0).getNome());
+				System.out.println("Pedido: " + entrega.getMotrarPedido(0).getNome());
+				System.out.println("Nome do Cliente: " + entrega.getPreco());
+				System.out.println("\n");
 		
-		//Exibe os pedidos da Entraga expressa
-		System.out.println(entregaExpressa.getMotrarPedidoCliente(0).getNome());
-		System.out.println(entregaExpressa.getMotrarPedido(0).getNome());
-		System.out.println(entregaExpressa.getPreco());		
+		//Pedido do Cliente 02
+				System.out.println("Nome do Cliente: " + entrega.getMotrarPedidoCliente(1).getNome());
+				System.out.println("Pedido: " + entrega.getMotrarPedido(1).getNome());
+				System.out.println("Preço: " + entrega.getPreco());
+				System.out.println("\n");
 		
+		
+		
+		//Exibe os pedidos da Entraga Expressa
+		//Pedido do Cliente 02
+				System.out.println("Nome do Cliente: " + entregaExpressa.getMotrarPedidoCliente(0).getNome());
+				System.out.println("Pedido: " + entregaExpressa.getMotrarPedido(0).getNome());
+				System.out.println("Preço: " + entregaExpressa.getPreco());		
+				System.out.println("\n");
+				
+		//Exibe a Soma Total dos pesos de todos os pedidos da Entrega Default
+				System.out.println("Soma de Todos Pesos: " + entrega.getSomaPeso());
 	}
 
 }

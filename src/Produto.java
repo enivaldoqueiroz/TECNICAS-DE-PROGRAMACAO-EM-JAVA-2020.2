@@ -7,10 +7,11 @@ public class Produto {
 	private float peso;
 	
 	//Construtores
+	//Construtore sem argumentos
 	public Produto() {
 		
 	}
-	
+	//Construtore com argumentos
 	public Produto(int codigo, String nome, float peso) {
 		this.codigo = codigo;
 		this.nome = nome;

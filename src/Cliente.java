@@ -1,16 +1,17 @@
 
 public class Cliente {
 	
-		//Atributos da classe Produto
+		//Atributos da classe Cliente
 		private int codigo;
 		private String nome;
 		private String endereco;
-				
+			
 		//Construtores
+		//Construtore sem argumentos
 		public Cliente() {
 			
 		}
-		
+		//Construtore com argumentos
 		public Cliente(int codigo, String nome, String endereco) {
 			this.codigo = codigo;
 			this.nome = nome;
