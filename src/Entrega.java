@@ -4,10 +4,13 @@ public class Entrega extends Produto{
 	//Atributos da classe Produto
 	private int codigo;
 	private String data;
-	private Cliente cliente[] = new Cliente[3]; 	//Agregação da classe Cliente
+	private Cliente cliente[] = new Cliente[50]; 	//Agregação da classe Cliente
 	private float preco;
-	private Produto produto[] = new Produto[3];	//Agregação da classe Produto
+	private Produto produto[] = new Produto[50];	//Agregação da classe Produto
+	private float peso[] = new float[50];	//Agregação da classe Produto
+	private float somaPeso;
 	private int indice = 0;
+	
 	
 	//Construtores
 	public Entrega() {
@@ -28,7 +31,7 @@ public class Entrega extends Produto{
 		this.cliente[indice] = c;
 		indice++;
 	}
-	
+		
 	//Metodo para retornar os pedidos cadastrados
 	public Produto getMotrarPedido(int indice) {
 		return this.produto[indice];
@@ -36,6 +39,18 @@ public class Entrega extends Produto{
 	//Metodo para retornar os pedidos cadastrados do cliente
 	public Cliente getMotrarPedidoCliente(int indice) {
 		return this.cliente[indice];
+	}
+	
+	//Metodo para somar todos os pesos dos produtos cadatrados
+	public void setInserePeso(float peso) {
+		this.peso[indice] = peso;
+		indice++;		
+	}
+	public float getSomaPeso() {
+		for(int i = 0; i< this.peso.length;i++) {
+			somaPeso = somaPeso + (this.peso[i]);
+		}
+			return somaPeso;
 	}
 	
 	
@@ -68,6 +83,7 @@ public class Entrega extends Produto{
 	public void setPreco(float preco) {
 		this.preco = preco;
 	}
+	
 	
 	
 }

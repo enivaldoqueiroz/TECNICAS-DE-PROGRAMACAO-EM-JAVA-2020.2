@@ -33,6 +33,9 @@ public class Principal {
 		Entrega entrega = new Entrega();
 		//Vetor de produtos = Inserindo os pedidos no indice do vetor
 		entrega.setCadastrarPedido(prod01,cli01);
+		entrega.setInserePeso(1.0f);
+		entrega.setInserePeso(1.0f);
+		entrega.setInserePeso(1.0f);
 		entrega.setPreco(4.5f);
 		
 		//Instanciando a classe Entrega
@@ -46,6 +49,7 @@ public class Principal {
 		//Exibe os pedidos da Entraga normal
 		System.out.println(entrega.getMotrarPedidoCliente(0).getNome());
 		System.out.println(entrega.getMotrarPedido(0).getNome());
+		System.out.println(entrega.getSomaPeso());
 		System.out.println(entrega.getPreco());
 		
 		//Exibe os pedidos da Entraga expressa
